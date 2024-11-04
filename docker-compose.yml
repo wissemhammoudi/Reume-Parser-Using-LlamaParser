@@ -1,0 +1,28 @@
+# Version de Docker Compose
+version: '3.8'
+services:
+  # Service backend - API et logique métier
+  backend:
+    # Construction depuis le Dockerfile dans ./backend
+    build: ./backend
+    ports:
+      # Exposition du port 80 du conteneur sur le port 80 de l'hôte
+      - "80:80"
+    volumes:
+      # Montage du code source pour le développement
+      - ./backend/app:/code/app
+
+  # Service frontend - Interface utilisateur
+  frontend:
+    # Construction depuis le Dockerfile dans ./frontend 
+    build: ./frontend
+    ports:
+      # Exposition du port 3000 du conteneur sur le port 3000 de l'hôte
+      - "3000:3000"
+    volumes:
+      # Montage des fichiers source et publics pour le développement
+      - ./frontend/src:/app/src
+      - ./frontend/public:/app/public
+    depends_on:
+      # Assure que le backend démarre avant le frontend
+      - backend
