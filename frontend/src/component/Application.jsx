@@ -2,7 +2,6 @@ import axios from "axios";
 import React, { useState } from "react";
 import toast from "react-hot-toast";
 import "./Application.css";
-import exampleImage from './../Hind-CV-1_page_1_img_1.png';
 
 const Application = () => {
   const [resume, setResume] = useState(null);
