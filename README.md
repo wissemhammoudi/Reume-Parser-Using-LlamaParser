@@ -9,7 +9,6 @@ Extract structured information from PDF resumes using advanced AI analysis, comp
 - **Skills Intelligence**: Maps skills to experience periods and job contexts
 - **Multi-language Support**: Automatically translates non-English resumes
 - **Structured Output**: Clean, consistent JSON data for easy integration
-- **Real-time Processing**: Fast analysis with comprehensive error handling
 
 ##  Quick Start
 
@@ -21,7 +20,7 @@ Extract structured information from PDF resumes using advanced AI analysis, comp
 ### 1. Setup Environment
 ```bash
 # Clone the repository
-git clone https://github.com/wissemhammoudi/RH-chabot-using-RAG-Fusion
+git clone https://github.com/wissemhammoudi/Reume-Parser-Using-LlamaParser
 cd Reume-Parser-Using-LlamaParser
 
 # Create environment file
